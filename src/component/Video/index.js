@@ -1,22 +1,24 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 
 const Video = ({ src, title, poster }) => {
     const videoRef = useRef(null);
+    const [isPlaying, setIsPlaying] = useState(false);
 
     const handleVideoClick = () => {
         const video = videoRef.current;
 
-        if (video.paused) {
-            video.play();
-        } else {
+        if (isPlaying) {
             video.pause();
+        } else {
+            video.play();
         }
+
+        setIsPlaying(!isPlaying);
     };
 
     return (
-        <div className='portfolio_item ratio ratio-1x1'>
-            <video ref={videoRef} className='img-responsive' onClick={handleVideoClick} poster={poster}
-            >
+        <div className='portfolio_item ratio ratio-1x1' onClick={handleVideoClick}>
+            <video ref={videoRef} className='img-responsive' poster={poster}>
                 <source src={src} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
