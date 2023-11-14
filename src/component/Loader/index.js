@@ -4,18 +4,17 @@ const Loader = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        // Function to hide the loader
         const hideLoader = () => {
             setLoading(false);
             document.body.style.overflow = 'visible';
         };
 
-        // Attach the hideLoader function to the window.onload event
-        window.onload = hideLoader;
+        // Set a timeout to ensure the loader is hidden even if the window.onload event doesn't fire
+        const timeoutId = setTimeout(hideLoader, 1000);
 
-        // Cleanup: remove the event listener when the component unmounts
         return () => {
-            window.onload = null;
+            // Clear the timeout when the component unmounts
+            clearTimeout(timeoutId);
         };
     }, []);
 
