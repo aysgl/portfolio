@@ -30,8 +30,8 @@ const Video = ({ src, title }) => {
 
     return (
         <div className='portfolio_item ratio ratio-1x1'>
-            <video ref={videoRef} className='img-responsive' onClick={handleVideoClick}>
-                <source src={src} type='video/mp4' />
+            <video controls ref={videoRef} className='img-responsive' onClick={handleVideoClick} autoplay>
+                <source src={src} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
             <div className="portfolio_item_hover" onClick={handleVideoClick}>
