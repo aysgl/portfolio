@@ -49,7 +49,7 @@ const Portfolio = () => {
                                 <Video src={Collapse} title="Collapse" poster={CollapseImg} gridRef={gridRef} />
                             </div>
                             <div className="col-md-6">
-                                <Video src={Discount} title="Discount" poster={DicegameImg} gridRef={gridRef} />
+                                <Video src={Discount} title="Discount" poster={DiscountImg} gridRef={gridRef} />
                             </div>
                             <div className="col-md-6">
                                 <Video src={Dicegame} title="Dicegame" poster={DicegameImg} gridRef={gridRef} />
