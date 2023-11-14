@@ -1,7 +1,22 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 
 const Video = ({ src, title }) => {
     const videoRef = useRef(null);
+
+    useEffect(() => {
+        const video = videoRef.current;
+
+        const handleCanPlay = () => {
+            video.play();
+            video.removeEventListener('canplay', handleCanPlay);
+        };
+
+        video.addEventListener('canplay', handleCanPlay);
+
+        return () => {
+            video.removeEventListener('canplay', handleCanPlay);
+        };
+    }, []);
 
     const handleVideoClick = () => {
         const video = videoRef.current;
@@ -14,7 +29,6 @@ const Video = ({ src, title }) => {
     };
 
     return (
-
         <div className='portfolio_item ratio ratio-1x1'>
             <video ref={videoRef} src={src} className='img-responsive' onClick={handleVideoClick}></video>
             <div className="portfolio_item_hover" onClick={handleVideoClick}>
