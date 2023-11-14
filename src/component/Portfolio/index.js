@@ -2,9 +2,9 @@ import React, { useRef } from 'react';
 import Isotope from 'isotope-layout';
 import Collapse from "../../design/collapse.mov"
 import Currency from "../../design/currency.mov"
+import CurrencyImg from "../../design/currency.png"
 import Dicegame from "../../design/dicegame.mov"
 import Discount from "../../design/discount.mov"
-import Drawing from "../../design/drawing.mov"
 import Feedback from "../../design/feedback.mov"
 import Github from "../../design/github.mov"
 import Login from "../../design/login.mov"
@@ -16,7 +16,6 @@ import Scrolling from "../../design/scrolling.mov"
 import Searchapp from "../../design/searchapp.mov"
 import Todo from "../../design/todo.mov"
 import Twitter from "../../design/twitter.mov"
-import Wizard from "../../design/wizard.mov"
 import Video from '../Video';
 
 
@@ -30,7 +29,7 @@ const Portfolio = () => {
                     <div className='col-md-6'>
                         <div className='row g-0'>
                             <div className="col-md-6">
-                                <Video src={Currency} title="Currency" gridRef={gridRef} />
+                                <Video src={Currency} title="Currency" poster={CurrencyImg} gridRef={gridRef} />
                             </div>
                             <div className="col-md-6">
                                 <Video src={Collapse} title="Collapse" gridRef={gridRef} />
