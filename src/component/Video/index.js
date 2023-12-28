@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 
-const Video = ({ src, title, poster }) => {
+const Video = ({ src, video, title, poster, tag }) => {
     const videoRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
 
@@ -19,14 +20,14 @@ const Video = ({ src, title, poster }) => {
     return (
         <div className='portfolio_item ratio ratio-1x1' onClick={handleVideoClick}>
             <video ref={videoRef} className='img-responsive' poster={poster}>
-                <source src={src} type="video/mp4" />
+                <source src={video} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
             <div className="portfolio_item_hover">
                 <div className="portfolio-border clearfix">
                     <div className="item_info">
-                        <span>{title}</span>
-                        <em>js, html, scss</em>
+                        <span><a href={src} target='_blank'>{title}</a></span>
+                        <em>{tag}</em>
                     </div>
                 </div>
             </div>
