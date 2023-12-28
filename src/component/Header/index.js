@@ -5,9 +5,7 @@ const Header = () => {
         <div className='container-fluid'>
             <header className="box-header">
                 <div className="box-logo">
-                    <a href="index.html">
-                        ayşegül avcu
-                    </a>
+                    ayşegül avcu
                 </div>
             </header>
         </div>
