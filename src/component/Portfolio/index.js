@@ -46,68 +46,68 @@ const Portfolio = () => {
                     <div className='col-md-6'>
                         <div className='row g-0'>
                             <div className="col-md-6">
-                                <Video img={Currency} title="Currency" poster={CurrencyImg} src="https://github.com/aysgl/currency" tag="js, html, scss" gridRef={gridRef} />
+                                <Video video={Currency} title="Currency" poster={CurrencyImg} src="https://github.com/aysgl/currency" tag="js, html, scss" gridRef={gridRef} />
                             </div>
                             <div className="col-md-6">
-                                <Video img={Collapse} title="Collapse" poster={CollapseImg} src="https://github.com/aysgl/collapse" tag="js, html, scss" gridRef={gridRef} />
+                                <Video video={Collapse} title="Collapse" poster={CollapseImg} src="https://github.com/aysgl/collapse" tag="js, html, scss" gridRef={gridRef} />
                             </div>
                             <div className="col-md-6">
-                                <Video img={Discount} title="Discount" poster={DiscountImg} src="https://github.com/aysgl/discount" tag="js, html, scss" gridRef={gridRef} />
+                                <Video video={Discount} title="Discount" poster={DiscountImg} src="https://github.com/aysgl/discount" tag="js, html, scss" gridRef={gridRef} />
                             </div>
                             <div className="col-md-6">
-                                <Video img={Dicegame} title="Dicegame" poster={DicegameImg} src="https://github.com/aysgl/dicegame" tag="reactjs, scss" gridRef={gridRef} />
+                                <Video video={Dicegame} title="Dicegame" poster={DicegameImg} src="https://github.com/aysgl/dicegame" tag="reactjs, scss" gridRef={gridRef} />
                             </div>
                         </div>
                     </div>
                     <div className='col-md-6'>
-                        <Video img={Notepad} title="Notepad" poster={NotepadImg} src="https://github.com/aysgl/notepad-react" tag="reactjs, scss" gridRef={gridRef} />
+                        <Video video={Notepad} title="Notepad" poster={NotepadImg} src="https://github.com/aysgl/notepad-react" tag="reactjs, scss" gridRef={gridRef} />
 
                     </div>
                     <div className='col-md-6'>
-                        <Video img={Feedback} title="Feedback" poster={FeedbackImg} src="https://github.com/aysgl/feedback" tag="js, html, scss" gridRef={gridRef} />
+                        <Video video={Feedback} title="Feedback" poster={FeedbackImg} src="https://github.com/aysgl/feedback" tag="js, html, scss" gridRef={gridRef} />
                     </div>
                     <div className='col-md-6'>
                         <div className="row g-0">
                             <div className="col-md-6">
-                                <Video img={Github} title="Github" poster={GithubImg} src="https://github.com/aysgl/github" tag="js, html, scss" gridRef={gridRef} />
+                                <Video video={Github} title="Github" poster={GithubImg} src="https://github.com/aysgl/github" tag="js, html, scss" gridRef={gridRef} />
                             </div>
                             <div className="col-md-6">
-                                <Video img={Login} title="Login" poster={LoginImg} src="https://github.com/aysgl/login" tag="js, html, scss" gridRef={gridRef} />
+                                <Video video={Login} title="Login" poster={LoginImg} src="https://github.com/aysgl/login" tag="js, html, scss" gridRef={gridRef} />
                             </div>
                             <div className="col-md-6">
-                                <Video img={Movie} title="Movie" poster={MovieImg} src="https://github.com/aysgl/movies" tag="js, html, scss" gridRef={gridRef} />
+                                <Video video={Movie} title="Movie" poster={MovieImg} src="https://github.com/aysgl/movies" tag="js, html, scss" gridRef={gridRef} />
                             </div>
                             <div className='col-md-6'>
-                                <Video img={Searchapp} title="Searchapp" poster={SearchappImg} src="https://github.com/aysgl/searchapp" tag="js, html, scss" gridRef={gridRef} />
+                                <Video video={Searchapp} title="Searchapp" poster={SearchappImg} src="https://github.com/aysgl/searchapp" tag="js, html, scss" gridRef={gridRef} />
                             </div>
                         </div>
                     </div>
                     <div className='col-md-6'>
                         <div className="row g-0">
                             <div className="col-md-6">
-                                <Video img={Todo} title="Todo" poster={TodoImg} src="https://github.com/aysgl/todo-redux" tag="reactjs, redux, scss" gridRef={gridRef} />
+                                <Video video={Todo} title="Todo" poster={TodoImg} src="https://github.com/aysgl/todo-redux" tag="reactjs, redux, scss" gridRef={gridRef} />
                             </div>
                             <div className="col-md-6">
-                                <Video img={Twitter} title="Twitter" poster={TwitterImg} src="https://github.com/aysgl/tweetcard" tag="js, html, scss" gridRef={gridRef} />
+                                <Video video={Twitter} title="Twitter" poster={TwitterImg} src="https://github.com/aysgl/tweetcard" tag="js, html, scss" gridRef={gridRef} />
                             </div>
                             <div className="col-md-6">
-                                <Video img={Quizapp} title="Quizapp" poster={QuizappImg} src="https://github.com/aysgl/quizapp" tag="js, html, scss" gridRef={gridRef} />
+                                <Video video={Quizapp} title="Quizapp" poster={QuizappImg} src="https://github.com/aysgl/quizapp" tag="js, html, scss" gridRef={gridRef} />
                             </div>
                             <div className="col-md-6">
-                                <Video img={Scrolling} title="Blogs" poster={ScrollingImg} src="https://github.com/aysgl/blogs" tag="js, html, scss" gridRef={gridRef} />
+                                <Video video={Scrolling} title="Blogs" poster={ScrollingImg} src="https://github.com/aysgl/blogs" tag="js, html, scss" gridRef={gridRef} />
                             </div>
                         </div>
                     </div>
                     <div className='col-md-6'>
-                        <Video img={Playlist} title="Playlist" poster={PlaylistImg} src="https://github.com/aysgl/playlist" tag="js, html, scss" gridRef={gridRef} />
+                        <Video video={Playlist} title="Playlist" poster={PlaylistImg} src="https://github.com/aysgl/playlist" tag="js, html, scss" gridRef={gridRef} />
                     </div>
                     <div className='col-md-6'>
-                        <Video img={Translate} title="Translate" poster={TranslateImg} src="https://github.com/aysgl/translate" tag="reactjs, redux" gridRef={gridRef} />
+                        <Video video={Translate} title="Translate" poster={TranslateImg} src="https://github.com/aysgl/translate" tag="reactjs, redux" gridRef={gridRef} />
                     </div>
                     <div className='col-md-6'>
                         <div className="row g-0">
                             <div className="col-md-12">
-                                <Video img={FlightRadar} title="Flight Radar" poster={FlightRadarImg} src="https://github.com/aysgl/flightradar" tag="reactjs, redux" gridRef={gridRef} />
+                                <Video video={FlightRadar} title="Flight Radar" poster={FlightRadarImg} src="https://github.com/aysgl/flightradar" tag="reactjs, redux" gridRef={gridRef} />
                             </div>
                         </div>
                     </div>
