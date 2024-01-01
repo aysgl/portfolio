@@ -31,6 +31,8 @@ import Twitter from "../../design/twitter.mov"
 import TwitterImg from "../../design/twitter.png"
 import Translate from "../../design/translate.mov"
 import TranslateImg from "../../design/translate.png"
+import FlightRadar from "../../design/flightradar.mov"
+import FlightRadarImg from "../../design/flightradar.png"
 import Video from '../Video';
 
 
@@ -101,6 +103,13 @@ const Portfolio = () => {
                     </div>
                     <div className='col-md-6'>
                         <Video img={Translate} title="Translate" poster={TranslateImg} src="https://github.com/aysgl/translate" tag="reactjs, redux" gridRef={gridRef} />
+                    </div>
+                    <div className='col-md-6'>
+                        <div className="row g-0">
+                            <div className="col-md-12">
+                                <Video img={FlightRadar} title="Flight Radar" poster={FlightRadarImg} src="https://github.com/aysgl/flightradar" tag="reactjs, redux" gridRef={gridRef} />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
