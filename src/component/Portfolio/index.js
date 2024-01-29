@@ -33,6 +33,12 @@ import Translate from "../../design/translate.mov"
 import TranslateImg from "../../design/translate.png"
 import FlightRadar from "../../design/flightradar.mov"
 import FlightRadarImg from "../../design/flightradar.png"
+import Job from "../../design/jobs.mov"
+import JobImg from "../../design/jobs.png"
+import Coin from "../../design/coin.mov"
+import CoinImg from "../../design/coin.png"
+import Chat from "../../design/chat.mov"
+import ChatImg from "../../design/chat.png"
 import Video from '../Video';
 
 
@@ -106,8 +112,17 @@ const Portfolio = () => {
                     </div>
                     <div className='col-md-6'>
                         <div className="row g-0">
-                            <div className="col-md-12">
+                            <div className="col-md-6">
                                 <Video video={FlightRadar} title="Flight Radar" poster={FlightRadarImg} src="https://github.com/aysgl/flightradar" tag="reactjs, redux" gridRef={gridRef} />
+                            </div>
+                            <div className="col-md-6">
+                                <Video video={Job} title="Job" poster={JobImg} src="https://github.com/aysgl/jobs" tag="reactjs, redux" gridRef={gridRef} />
+                            </div>
+                            <div className="col-md-6">
+                                <Video video={Coin} title="Coin" poster={CoinImg} src="https://github.com/aysgl/coin" tag="reactjs, chartjs" gridRef={gridRef} />
+                            </div>
+                            <div className="col-md-6">
+                                <Video video={Chat} title="Chat" poster={ChatImg} src="https://github.com/aysgl/chat" tag="reactjs, firebase" gridRef={gridRef} />
                             </div>
                         </div>
                     </div>
@@ -118,4 +133,5 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+
 
