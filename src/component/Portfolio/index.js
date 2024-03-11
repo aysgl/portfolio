@@ -39,6 +39,8 @@ import Coin from "../../design/coin.mov"
 import CoinImg from "../../design/coin.png"
 import Chat from "../../design/chat.mov"
 import ChatImg from "../../design/chat.png"
+import CarTs from "../../design/carts.mov"
+import CarTsImg from "../../design/carts.png"
 import Video from '../Video';
 
 
@@ -126,6 +128,26 @@ const Portfolio = () => {
                             </div>
                         </div>
                     </div>
+
+                    <div className='col-md-6'>
+                        <div className="row g-0">
+                            <div className="col-md-6">
+                                <Video video={CarTs} title="Todo" poster={CarTsImg} src="https://github.com/aysgl/carts" tag="reactjs, typescript, scss" gridRef={gridRef} />
+                            </div>
+                            {/* <div className="col-md-6">
+                                <Video video={Twitter} title="Twitter" poster={TwitterImg} src="https://github.com/aysgl/tweetcard" tag="js, html, scss" gridRef={gridRef} />
+                            </div>
+                            <div className="col-md-6">
+                                <Video video={Quizapp} title="Quizapp" poster={QuizappImg} src="https://github.com/aysgl/quizapp" tag="js, html, scss" gridRef={gridRef} />
+                            </div>
+                            <div className="col-md-6">
+                                <Video video={Scrolling} title="Blogs" poster={ScrollingImg} src="https://github.com/aysgl/blogs" tag="js, html, scss" gridRef={gridRef} />
+                            </div> */}
+                        </div>
+                    </div>
+                    {/* <div className='col-md-6'>
+                        <Video video={Playlist} title="Playlist" poster={PlaylistImg} src="https://github.com/aysgl/playlist" tag="js, html, scss" gridRef={gridRef} />
+                    </div> */}
                 </div>
             </div>
         </div>
