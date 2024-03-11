@@ -132,7 +132,7 @@ const Portfolio = () => {
                     <div className='col-md-6'>
                         <div className="row g-0">
                             <div className="col-md-6">
-                                <Video video={CarTs} title="Todo" poster={CarTsImg} src="https://github.com/aysgl/carts" tag="reactjs, typescript, scss" gridRef={gridRef} />
+                                <Video video={CarTs} title="Car typescript" poster={CarTsImg} src="https://github.com/aysgl/carts" tag="reactjs, typescript, scss" gridRef={gridRef} />
                             </div>
                             {/* <div className="col-md-6">
                                 <Video video={Twitter} title="Twitter" poster={TwitterImg} src="https://github.com/aysgl/tweetcard" tag="js, html, scss" gridRef={gridRef} />
