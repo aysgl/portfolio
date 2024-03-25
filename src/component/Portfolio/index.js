@@ -43,6 +43,12 @@ import CarTs from "../../design/carts.mov";
 import CarTsImg from "../../design/carts.png";
 import NoteTs from "../../design/notets.mov";
 import NoteTsImg from "../../design/notets.png";
+import Notes from "../../design/notes.mov";
+import NotesImg from "../../design/notes.png";
+import Games from "../../design/gamesrn.mov";
+import GamesImg from "../../design/gamesrn.png";
+import Moviesb from "../../design/moviesb.mov";
+import MoviesbImg from "../../design/moviesb.png";
 import Video from "../Video";
 
 const Portfolio = () => {
@@ -291,17 +297,38 @@ const Portfolio = () => {
                   gridRef={gridRef}
                 />
               </div>
-              {/*  <div className="col-md-6">
-                                <Video video={Quizapp} title="Quizapp" poster={QuizappImg} src="https://github.com/aysgl/quizapp" tag="js, html, scss" gridRef={gridRef} />
-                            </div>
-                            <div className="col-md-6">
-                                <Video video={Scrolling} title="Blogs" poster={ScrollingImg} src="https://github.com/aysgl/blogs" tag="js, html, scss" gridRef={gridRef} />
-                            </div> */}
+              <div className="col-md-6">
+                <Video
+                  video={Notes}
+                  title="Notes"
+                  poster={NotesImg}
+                  src="https://github.com/aysgl/notesrn"
+                  tag="react native"
+                  gridRef={gridRef}
+                />
+              </div>
+              <div className="col-md-6">
+                <Video
+                  video={Games}
+                  title="Games"
+                  poster={GamesImg}
+                  src="https://github.com/aysgl/gamesrn"
+                  tag="react native"
+                  gridRef={gridRef}
+                />
+              </div>
             </div>
           </div>
-          {/* <div className='col-md-6'>
-                        <Video video={Playlist} title="Playlist" poster={PlaylistImg} src="https://github.com/aysgl/playlist" tag="js, html, scss" gridRef={gridRef} />
-                    </div> */}
+          <div className="col-md-6">
+            <Video
+              video={Moviesb}
+              title="Movies"
+              poster={MoviesbImg}
+              src="https://github.com/aysgl/moviesb"
+              tag="node.js"
+              gridRef={gridRef}
+            />
+          </div>
         </div>
       </div>
     </div>
