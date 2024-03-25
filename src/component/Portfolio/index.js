@@ -45,9 +45,9 @@ import NoteTs from "../../design/notets.gif";
 import NoteTsImg from "../../design/notets.png";
 import Notes from "../../design/notes.gif";
 import NotesImg from "../../design/notes.png";
-import Games from "../../design/gamesrn.mov";
+import Games from "../../design/gamesrn.gif";
 import GamesImg from "../../design/gamesrn.png";
-import Moviesb from "../../design/moviesb.mov";
+import Moviesb from "../../design/moviesb.gif";
 import MoviesbImg from "../../design/moviesb.png";
 import Video from "../Video";
 
