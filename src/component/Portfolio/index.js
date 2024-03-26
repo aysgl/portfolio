@@ -349,7 +349,7 @@ const Portfolio = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-6 portfolio-item reactjs reactnative reactnative">
+            <div className="col-md-6 portfolio-item reactjs reactnative typescript reactnative">
               <div className="row g-0">
                 <div className="col-md-6">
                   <Video
