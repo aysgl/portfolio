@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Collapse from "../../design/collapse.gif";
 import CollapseImg from "../../design/collapse.png";
 import Currency from "../../design/currency.gif";
@@ -51,11 +51,14 @@ import GamesImg from "../../design/gamesrn.png";
 import Moviesb from "../../design/moviesb.gif";
 import MoviesbImg from "../../design/moviesb.png";
 import Video from "../Video";
+import Isotope from "isotope-layout";
 
 const Portfolio = () => {
-  const gridRef = useRef(null);
+  // const gridRef = useRef(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedVideo, setSelectedVideo] = useState(null);
+  const isotope = useRef();
+  const [filterKey, setFilterKey] = useState("*");
 
   const openModal = (video) => {
     setIsModalOpen(true);
@@ -67,12 +70,70 @@ const Portfolio = () => {
     setSelectedVideo(null);
   };
 
+  useEffect(() => {
+    isotope.current = new Isotope(".portfolio_container", {
+      itemSelector: ".portfolio-item",
+      layoutMode: "fitRows",
+      //   layoutMode: "masonry",
+    });
+    return () => isotope.current.destroy();
+  }, []);
+
+  useEffect(() => {
+    filterKey === "*"
+      ? isotope.current.arrange({ filter: `*` })
+      : isotope.current.arrange({ filter: `.${filterKey}` });
+  }, [filterKey]);
+
+  const handleFilterKeyChange = (key) => () => {
+    setFilterKey(key);
+    const navItems = document.querySelectorAll(".nav-link");
+    navItems.forEach((item) => item.classList.remove("active"));
+    const selectedItem = document.querySelector(`.nav-link[data-key="${key}"]`);
+    if (selectedItem) {
+      selectedItem.classList.add("active");
+    }
+  };
+
   return (
     <div className="position-relative">
+      <ul className="nav nav-underline justify-content-center my-4">
+        <li className="nav-item" onClick={handleFilterKeyChange("*")}>
+          <span className="nav-link text-black" data-key="*">
+            All
+          </span>
+        </li>
+        <li className="nav-item" onClick={handleFilterKeyChange("javascript")}>
+          <span className="nav-link text-black" data-key="javascript">
+            JavaScript
+          </span>
+        </li>
+        <li className="nav-item" onClick={handleFilterKeyChange("typescript")}>
+          <span className="nav-link text-black" data-key="typescript">
+            TypeScript
+          </span>
+        </li>
+        <li className="nav-item" onClick={handleFilterKeyChange("reactjs")}>
+          <span className="nav-link text-black" data-key="reactjs">
+            React.js
+          </span>
+        </li>
+        <li className="nav-item" onClick={handleFilterKeyChange("reactnative")}>
+          <span className="nav-link text-black" data-key="reactnative">
+            React Native
+          </span>
+        </li>
+        <li className="nav-item" onClick={handleFilterKeyChange("nodejs")}>
+          <span className="nav-link text-black" data-key="nodejs">
+            Node.js
+          </span>
+        </li>
+      </ul>
+
       <div className="portfolio-div">
         <div className="portfolio">
-          <div className="grid g-0 row portfolio_container " ref={gridRef}>
-            <div className="col-md-6">
+          <div className="grid g-0 row portfolio_container" ref={isotope}>
+            <div className="col-md-6 portfolio-item javascript">
               <div className="row g-0">
                 <div className="col-md-6">
                   <Video
@@ -106,17 +167,17 @@ const Portfolio = () => {
                 </div>
                 <div className="col-md-6">
                   <Video
-                    video={Dicegame}
-                    title="Dicegame"
-                    poster={DicegameImg}
-                    src="https://github.com/aysgl/dicegame"
-                    tag="reactjs, scss"
-                    openModal={() => openModal(Dicegame)}
+                    video={Feedback}
+                    title="Feedback"
+                    poster={FeedbackImg}
+                    src="https://github.com/aysgl/feedback"
+                    tag="js, html, scss"
+                    openModal={() => openModal(Feedback)}
                   />
                 </div>
               </div>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 portfolio-item reactjs">
               <Video
                 video={Notepad}
                 title="Notepad"
@@ -126,17 +187,17 @@ const Portfolio = () => {
                 openModal={() => openModal(Notepad)}
               />
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 portfolio-item reactjs">
               <Video
-                video={Feedback}
-                title="Feedback"
-                poster={FeedbackImg}
-                src="https://github.com/aysgl/feedback"
-                tag="js, html, scss"
-                openModal={() => openModal(Feedback)}
+                video={Dicegame}
+                title="Dicegame"
+                poster={DicegameImg}
+                src="https://github.com/aysgl/dicegame"
+                tag="reactjs, scss"
+                openModal={() => openModal(Dicegame)}
               />
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 portfolio-item javascript">
               <div className="row g-0">
                 <div className="col-md-6">
                   <Video
@@ -180,16 +241,16 @@ const Portfolio = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 portfolio-item javascript">
               <div className="row g-0">
                 <div className="col-md-6">
                   <Video
-                    video={Todo}
-                    title="Todo"
-                    poster={TodoImg}
-                    src="https://github.com/aysgl/todo-redux"
-                    tag="reactjs, redux, scss"
-                    openModal={() => openModal(Todo)}
+                    video={Playlist}
+                    title="Playlist"
+                    poster={PlaylistImg}
+                    src="https://github.com/aysgl/playlist"
+                    tag="js, html, scss"
+                    openModal={() => openModal(Playlist)}
                   />
                 </div>
                 <div className="col-md-6">
@@ -224,17 +285,17 @@ const Portfolio = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 portfolio-item reactjs">
               <Video
-                video={Playlist}
-                title="Playlist"
-                poster={PlaylistImg}
-                src="https://github.com/aysgl/playlist"
-                tag="js, html, scss"
-                openModal={() => openModal(Playlist)}
+                video={Todo}
+                title="Todo"
+                poster={TodoImg}
+                src="https://github.com/aysgl/todo-redux"
+                tag="reactjs, redux, scss"
+                openModal={() => openModal(Todo)}
               />
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 portfolio-item reactjs">
               <Video
                 video={Translate}
                 title="Translate"
@@ -244,7 +305,7 @@ const Portfolio = () => {
                 openModal={() => openModal(Translate)}
               />
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 portfolio-item reactjs">
               <div className="row g-0">
                 <div className="col-md-6">
                   <Video
@@ -288,8 +349,7 @@ const Portfolio = () => {
                 </div>
               </div>
             </div>
-
-            <div className="col-md-6">
+            <div className="col-md-6 portfolio-item reactjs reactnative reactnative">
               <div className="row g-0">
                 <div className="col-md-6">
                   <Video
@@ -333,7 +393,7 @@ const Portfolio = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 portfolio-item nodejs">
               <Video
                 video={Moviesb}
                 title="Movies"
@@ -357,7 +417,7 @@ const Portfolio = () => {
               <div className="modal-content bg-transparent border-0">
                 <div className="modal-body text-center">
                   <img
-                    ref={gridRef}
+                    ref={isotope}
                     src={selectedVideo}
                     style={{ height: "86vh", width: "auto" }}
                     className="img-responsive"
